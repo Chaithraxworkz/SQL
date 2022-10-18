@@ -1,0 +1,21 @@
+CREATE database oct_15;
+CREATE TABLE college_details(id int,college_name varchar(30),college_fees bigint,location varchar(30),department varchar(20),phone_number bigint,category varchar(10),university_no int,university varchar(20),rating int);
+SELECT *FROM college_details;
+SELECT id,college_name from college_details;
+desc college_details;
+INSERT INTO college_details	VALUES(1,'PESITM',60000,'Shivamogga','CSE',95874364125,'General',453,'VTU',4);
+SELECT *FROM college_details;
+INSERT INTO college_details VALUES(2,'GEC',50000,'Hassan','ECE',7658423180,'OBC',509,'Autonomus',3);
+SELECT *FROM college_details;
+INSERT INTO college_details VALUES(3,'RV',100000,'Bangalore','ME',7658593180,'OBC',682,'VTU',5);
+SELECT *FROM college_details;
+INSERT INTO college_details VALUES(4,'Ambedkar',30000,'Bangalore','CE',9853476210,'SC',640,'Autonomus',4);
+SELECT *FROM college_details;
+INSERT INTO college_details VALUES(5,'FirstGrade',50000,'Ramangar','Bcom',7658423180,'Others',572,'Bangalore',4);
+SELECT *FROM college_details;
+INSERT INTO college_details VALUES(6,'GEC',50000,'Hassan','ECE',7658423180,'OBC',509,'Autonomus',3);
+SELECT *FROM college_details;
+INSERT INTO college_details	VALUES(7,'JNNC',90000,'Shivamogga','CSE',95874364125,'General',453,'VTU',4);
+SELECT *FROM college_details;
+
+ALTER TABLE college_details ADD COLUMN no_of_students int;
