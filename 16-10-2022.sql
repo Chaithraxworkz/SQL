@@ -23,6 +23,12 @@ INSERT INTO patient_details VALUES(6,'shankara','Ballari',16,60,'general',curren
 SELECT *FROM patient_details;
 INSERT INTO patient_details VALUES(7,'shankara','Ballari',15,40,'general',current_date(),9446320158,'male','Heart patient','Naveen Kumar',15000);
 SELECT *FROM patient_details;
+INSERT INTO patient_details VALUES(8,'shankar','Mysore',10,5,'general',current_date(),76624019820,'male','High fever','Naveen Kumar',1000);
+SELECT *FROM patient_details;
+INSERT INTO patient_details VALUES(9,'Rashmi','Mysore',20,5,'ICU',current_date(),952348135,'female','High fever','Bharathi',500);
+SELECT *FROM patient_details;
+
+
 
 
 
