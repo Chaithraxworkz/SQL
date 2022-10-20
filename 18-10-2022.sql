@@ -1,0 +1,24 @@
+CREATE database oct_18;
+use oct_18;
+CREATE TABLE product_details(Sl_No int,Customer_Name varchar(20),Cutstomer_Id bigint,Company_Name varchar(30),Product_Name varchar(20),Product_Id int,Manufacture_Date date,Price bigint,Expiry_Date date);
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(1,'Sahana',246850,'Loreal','Sunscreen',64,current_date(),450,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(2,'Geetha',201862,'Lakme','Makeup_Kit',1597,current_date(),1500,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(3,'Chaithra',201869,'Lakme','Liquid Foundation',68,current_date(),100,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(4,'Srusti',3025,'Nivea','Moisturising',142,current_date(),200,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(5,'Spurthy',201875,'Lakme','ComboPack',1590,current_date(),1500,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(6,'Rashmi',201615,'Biotique','Makeup_Kit',1640,current_date(),2000,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(7,'Kusuma',201849,'Lakme','Lipstick_Kit',1597,current_date(),1500,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(8,'Kavya',201862,'Maybelline','Liquid_Mate',1664,current_date(),360,current_date());
+SELECT *FROM product_details;
+INSERT INTO product_details VALUES(9,'sonu',2320,'Lackme','Liquid_Mate',1608,current_date(),499,current_date());
+INSERT INTO product_details VALUES(10,'Pooja',201865,'Maybelline','Fountation combo',60278,current_date(),999,current_date());
+SELECT *FROM product_details;
+
