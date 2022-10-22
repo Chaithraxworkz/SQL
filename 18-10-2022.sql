@@ -21,4 +21,4 @@ SELECT *FROM product_details;
 INSERT INTO product_details VALUES(9,'sonu',2320,'Lackme','Liquid_Mate',1608,current_date(),499,current_date());
 INSERT INTO product_details VALUES(10,'Pooja',201865,'Maybelline','Fountation combo',60278,current_date(),999,current_date());
 SELECT *FROM product_details;
-
+ALTER TABLE  product_details ADD COLUMN delivery_time timestamp;
