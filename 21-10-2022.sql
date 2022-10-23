@@ -28,4 +28,23 @@ UPDATE car_details SET Year=2022,location='France',Owner_Name='Manjuntha' WHERE 
 SELECT *FROM car_details;
 UPDATE car_details SET price=70.80,Car_Milage='35kmpl',Car_Name='Nano',chassis_Number='BMC5F5670188' WHERE id=1;
 DELETE FROM car_details WHERE id=1;
+UPDATE car_details SET price=50.60,Car_Milage='25kmpl',Car_Name='Shift',chassis_Number='AG249HR753',Owner_Name='Sanju' WHERE id=2;
+DELETE FROM car_details WHERE id=2;
+UPDATE car_details SET price=20.10,Car_Milage='20kmpl',Car_Name='Omini',chassis_Number='NHM65LH24975',Owner_Name='Vijay' WHERE id=3;
+DELETE FROM car_details WHERE id=3;
+UPDATE car_details SET price=90.20,Car_Milage='28kmpl',Car_Name='Ambasitor',chassis_Number='MANHG524610',Owner_Name='Basamma' WHERE id=4;
+DELETE FROM car_details WHERE id=4;
+UPDATE car_details SET price=50.04,Car_Milage='25kmpl',Car_Name='Ford',chassis_Number='GHP5L4672160',Owner_Name='Swathi' WHERE id=5;
+DELETE FROM car_details WHERE id=5;
+UPDATE car_details SET price=65.31,Car_Milage='22kmpl',Car_Name='Lamborgini',chassis_Number='ST76EP098567',Owner_Name='Vinay' WHERE id=6;
+DELETE FROM car_details WHERE id=6;
+UPDATE car_details SET price=80.05,Car_Milage='23kmpl',Car_Name='BMW',chassis_Number='KAB2WT6754',Owner_Name='Kusuma' WHERE id=7;
+DELETE FROM car_details WHERE id=7;
+UPDATE car_details SET price=25.20,Car_Milage='21kmpl',Car_Name='Jaguar',chassis_Number='AHJG67D9876',Owner_Name='Manoj' WHERE id=8;
+DELETE FROM car_details WHERE id=8;
+UPDATE car_details SET price=45.01,Car_Milage='19kmpl',Car_Name='Nano',chassis_Number='NBVH541HHO65',Owner_Name='Mythra' WHERE id=9;
+DELETE FROM car_details WHERE id=9;
+UPDATE car_details SET price=70.64,Car_Milage='15kmpl',Car_Name='Hummer',chassis_Number='MGPL5421GTU2016',Owner_Name='Deepti' WHERE id=10;
+DELETE FROM car_details WHERE id=10;
+
 
