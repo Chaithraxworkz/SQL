@@ -1,0 +1,26 @@
+CREATE database oct_24;
+use oct_22;
+CREATE TABLE country_details(id int not null unique,Country_Name varchar(20)not null unique,Capital varchar(30)not null unique,ISO varchar(10)not null unique,ISO_Numeric int not null unique,ISO3 varchar(10)not null unique,Currency_Code varchar(15)not null unique,Fromation bigint not null unique,Languages varchar(30),no_of_population bigint,check(no_o_population>=50000));
+SELECT *FROM country_details;
+
+INSERT INTO country_details VALUES(1,'India','New Delhi','IN',356,'IND','INR',1-11-1956,'Kannada',16.65);
+INSERT INTO country_details VALUES(2,'Australia','Canberra','AU',36,'AUS','AUD',22-3-1912,'English',20.25);
+INSERT INTO country_details VALUES(3,'Germany','Berlin','DE',276,'DEU','EUR',26-1-1950,'Malayalam',30.18);
+INSERT INTO country_details VALUES(4,'Laos','Vientiane','LA',418,'LAO','LAK',30-5-1987,'Mizo',16.85);
+INSERT INTO country_details VALUES(5,'United State','Washington','US',840,'USA','USD',15-11-2000,'Chattisgarhi',10.25);
+INSERT INTO country_details VALUES(6,'Zimbabwe','Harare','ZW',716,'ZWE','ZWL',20-2-1987,'Urdu',14.98);
+INSERT INTO country_details VALUES(7,'Belgium','Brussels','BE',56,'BEL','EUR',1-5-1960,'French',24.20);
+INSERT INTO country_details VALUES(8,'Canada','Ottawa','CA',124,'CAN','CAD',1-12-1963,'Portuguese',15.72);
+INSERT INTO country_details VALUES(9,'Brazil','Brasilia','BR',76,'BRA','BRL',1-11-1958,'French',18.10);
+INSERT INTO country_details VALUES(10,'Cuba','Havana','CU',192,'CUB','CUP',21-1-1972,'Spanish',13.87);
+INSERT INTO country_details VALUES(11,'Denmark','Copenhagen','DA',262,'DJI','DKK',21-3-1972,'Portuguese',21.35);
+INSERT INTO country_details VALUES(12,'Egypt','Cairo','EG',818,'EGY','EGP',1-12-1956,'Arabic',72.42);
+INSERT INTO country_details VALUES(13,'Finland','Helsinki','FI',246,'FIN','HUR',16-5-1975,'Swedish',24.82);
+INSERT INTO country_details VALUES(14,'France','Paris','FR',250,'FRA','FUR',1-11-1963,'French',52.03);
+INSERT INTO country_details VALUES(15,'Iran','Tehran','IR',364,'IRN','IRR',26-6-1975,'Persian',62.24);
+INSERT INTO country_details VALUES(16,'Japan','Tokyo','JP',392,'JPN','JPY',2-6-2014,'Japanese',25.38);
+INSERT INTO country_details VALUES(17,'Maldives','Male','MV',462,'MDV','MVR',1-10-1956,'Dhivehi',35.64);
+INSERT INTO country_details VALUES(18,'Nepal','Kathmandu','NP',524,'NPL','NPR',26-1-1952,'Nepali',45.95);
+INSERT INTO country_details VALUES(19,'Oman','Muscat','OM',512,'OMN','OMR',20-5-1987,'Arabic',19.45);
+INSERT INTO country_details VALUES(20,'Poland','Warsaw','PL',616,'POL','PLN',1-11-2000,'Polish',20.75);
+SELECT *FROM country_details;

@@ -79,3 +79,21 @@ SELECT AVG(Price) FROM Toothpaste_details;
 SELECT AVG(Brand) FROM Toothpaste_details;
 SELECT AVG(Net_weight) FROM Toothpaste_details;
 
+SELECT Brand FROM Toothpaste_details WHERE Brand LIKE 's%';
+SELECT Flavour FROM Toothpaste_details WHERE Flavour LIKE 'c%';
+
+SELECT Website FROM Toothpaste_details WHERE Website LIKE '%a';
+SELECT Brand FROM Toothpaste_details WHERE Brand LIKE '%P';
+
+SELECT Brand FROM Toothpaste_details WHERE Brand LIKE 'B%P%';
+
+SELECT *FROM Toothpaste_details WHERE Brand BETWEEN 'C' AND 'E';
+
+SELECT UPPER(Brand) FROM Toothpaste_details;
+SELECT LOWER(Brand) FROM Toothpaste_details;
+
+SELECT CONCAT(Brand,Price,Gram,Flavor)AS TOGEHER FROM Toothpaste_details;
+
+SELECT INSTR('website','s')AS POSITION;
+SELECT SUBSTR(Floavour,2,10)AS Toothpaste_details;
+SELECT SUBSTR(Website,3,7)AS Toothpaste_details;
