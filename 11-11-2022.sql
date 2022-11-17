@@ -16,19 +16,19 @@ INSERT INTO hotel_details VALUES(11,'Spring Brook','Singapur','Kolkata','Goa',10
 SELECT *FROM hotel_details;
 
 
-CREATE TABLE Hotel_customer(sl_no int,cust_id int,cust_name varchar(20),age int,birthdate date,gender varchar(10),address varchar(20),country varchar(15),h_id int,check_in time);
+CREATE TABLE Hotel_customer(sl_no int,cust_id int,cust_name varchar(20),age int,birthdate date,gender varchar(10),address varchar(20),country varchar(15),h_id int,check_in time,check_out time);
 SELECT *FROM Hotel_customer;
-INSERT INTO Hotel_customer VALUES(1,101,'Chaithra',20,'1995/03/06','F','Channapatana','India',201,'07:05:00');
-INSERT INTO Hotel_customer VALUES(2,102,'Arun',24,'1985/06/08','M','Bhadravthi','Delhi',202,'08:00:30');
-INSERT INTO Hotel_customer VALUES(3,103,'Mythra',35,'2003/03/31','F','Shivamogga','UK',203,'08:50:40');
-INSERT INTO Hotel_customer VALUES(4,104,'Sachhi',45,'1998/01/01','M','Bangalore','France',204,'07:05:59');
-INSERT INTO Hotel_customer VALUES(5,105,'Spurthy',22,'1994/04/14','F','Mumbai','Austrelia',205,'02:10:08');
-INSERT INTO Hotel_customer VALUES(6,106,'Mythra',33,'1999/09/05','F','Calicut','Rusia',206,'04:25:00');
-INSERT INTO Hotel_customer VALUES(7,107,'Nethra',46,'2000/07/26','F','Mandya','Kolar',207,'12:45:38');
-INSERT INTO Hotel_customer VALUES(8,108,'Prerana',15,'2013/06/03','F','Mysore','Canada',208,'11:18:20');
-INSERT INTO Hotel_customer VALUES(9,109,'Rushma',29,'2016/07/18','F','Bidadi','Singapur',209,'10:05:08');
-INSERT INTO Hotel_customer VALUES(10,110,'Pranav',32,'2019/12/30','M','Ramanagara','Maskut',210,'01:07:10');
-INSERT INTO Hotel_customer VALUES(11,111,'Shantha',58,'1975/11/18','F','Kolkatta','Koriya',211,'05:35:30');
+INSERT INTO Hotel_customer VALUES(1,101,'Chaithra',20,'1995/03/06','F','Channapatana','India',201,'07:05:00','12:00:00');
+INSERT INTO Hotel_customer VALUES(2,102,'Arun',24,'1985/06/08','M','Bhadravthi','Delhi',202,'08:00:30','08:00:00');
+INSERT INTO Hotel_customer VALUES(3,103,'Mythra',35,'2003/03/31','F','Shivamogga','UK',203,'08:50:40','09:00:00');
+INSERT INTO Hotel_customer VALUES(4,104,'Sachhi',45,'1998/01/01','M','Bangalore','France',204,'07:05:59','11:30:06');
+INSERT INTO Hotel_customer VALUES(5,105,'Spurthy',22,'1994/04/14','F','Mumbai','Austrelia',205,'02:10:08','04:27:40');
+INSERT INTO Hotel_customer VALUES(6,106,'Mythra',33,'1999/09/05','F','Calicut','Rusia',206,'04:25:00','08:40:56');
+INSERT INTO Hotel_customer VALUES(7,107,'Nethra',46,'2000/07/26','F','Mandya','Kolar',207,'12:45:38','11:07:50');
+INSERT INTO Hotel_customer VALUES(8,108,'Prerana',15,'2013/06/03','F','Mysore','Canada',208,'11:18:20','02:59:04');
+INSERT INTO Hotel_customer VALUES(9,109,'Rushma',29,'2016/07/18','F','Bidadi','Singapur',209,'10:05:08','06:45:56');
+INSERT INTO Hotel_customer VALUES(10,110,'Pranav',32,'2019/12/30','M','Ramanagara','Maskut',210,'01:07:10','10:52:24');
+INSERT INTO Hotel_customer VALUES(11,111,'Shantha',58,'1975/11/18','F','Kolkatta','Koriya',211,'05:35:30','07:35:10');
 SELECT *FROM Hotel_customer;
 
 
@@ -46,19 +46,25 @@ INSERT INTO hotel_facility(h_name,h_id,no_of_rooms,AC_rooms,price,cust_name,cust
 INSERT INTO hotel_facility(h_name,h_id,no_of_rooms,AC_rooms,price,cust_name,cust_id,no_of_members,no_of_servers,manager_name)VALUES('Time Motel',210,120,18,8000,'Trupti',110,5,150,'Anil Kumar');
 INSERT INTO hotel_facility(h_name,h_id,no_of_rooms,AC_rooms,price,cust_name,cust_id,no_of_members,no_of_servers,manager_name)VALUES('Spring Brook',211,130,60,10000,'Pavan',111,11,550,'Drshan');
 SELECT *FROM hotel_facility;
+SELECT *FROM hotel_details;
+SELECT *FROM Hotel_customer;
+
+
 
 SELECT hotel_details.country,hotel_details.hotel_name,hotel_facility.cust_name,hotel_facility.manager_name FROM hotel_details inner join hotel_facility on hotel_details.hotel_id=hotel_facility.cust_id;
 SELECT hotel_details.country,hotel_details.hotel_name,hotel_facility.cust_name,hotel_facility.manager_name FROM hotel_details left outer join hotel_facility on hotel_details.hotel_id=hotel_facility.cust_id;
 SELECT hotel_details.country,hotel_details.hotel_name,hotel_facility.cust_name,hotel_facility.manager_name FROM hotel_details right join hotel_facility on hotel_details.hotel_id=hotel_facility.cust_id;
 
-SELECT hotel_details.hotel_name,hotel_customer.cust_name,hotel_customer.check_in FROM hotel_details inner join hotel_customer on hotel_details.id=hotel_customer.cust_id;
+SELECT hotel_details.hotel_name,hotel_facility.no_of_rooms FROM hotel_details inner join hotel_facility on hotel_details.id=hotel_facility.id;
 SELECT hotel_details.hotel_name,hotel_customer.cust_name,hotel_customer.check_in FROM hotel_details left join hotel_customer on hotel_details.id=hotel_customer.cust_id;
 SELECT hotel_details.hotel_name,hotel_customer.cust_name,hotel_customer.check_in FROM hotel_details right join hotel_customer on hotel_details.id=hotel_customer.cust_id;
 
 
 SELECT hotel_name FROM hotel_details WHERE hotel_id=(SELECT h_id FROM hotel_customer WHERE cust_id=102);
-SELECT manager_name FROM hotel_facility WHERE cust_id=(SELECT cust_id FROM hotel_customer WHERE cust_name='Trupti');
+SELECT h_name FROM hotel_facility WHERE h_id=(SELECT hotel_id FROM hotel_details WHERE hotel_id=210);
 
 
+SELECT *FROM hotel_facility;
+SELECT *FROM hotel_details;
 
 
